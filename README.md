@@ -9,7 +9,7 @@ the color gray is majority used for the whole website thought different nuance
 ## Section's Website
 Section | Vibe | Animations | Colors |
 --- | --- | --- | ---
-Webisite | loop, concept of falling | opacity, hovers | all the below
+Website | loop, concept of falling | opacity, hovers | all the below
 Emptiness | empty, room, fog| blur & blinking's light | gray/black 
 Repulsion | screams, disproportions | scribbles | black/white 
 Acceptance | ocean, waves, nature | settles in | light gray/white 
