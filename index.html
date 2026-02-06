@@ -4,52 +4,92 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>the-mood-studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Mukta+Vaani:wght@200;300;400;500;600;700;800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>The Mood Studio</title>
   </head>
   <body>
-    <div id="app">
-      <header>
-        <nav>
-          <ul>
+      <header class="header">
+        <nav class="header-nav">
+          <ul class="header-list">
             <li>
-              <a href="#calm">1</a>
+              <a id="lonelinessLink" class="header-a font-main" href="#loneliness">Emptiness</a>
             </li>
             <li>
-              <a href="#loneliness">2</a>
+              <a id="repulsiveLink" class="header-a font-main" href="#repulsion">Repulsion</a>
             </li>
             <li>
-              <a href="#rage&disgust">3</a>
+              <a id="peaceLink" class="header-a font-main" href="#peace">Acceptance</a>
             </li>
           </ul>
         </nav>
       </header>
       <main>
-        <section id="calm" class="section">
-          <h2>this is a title</h2>
+        <section id="home" class="home">
+            <div class="home-title-section">
+              <h1 class="home-title font-main">The vicious circle</h1>
+            </div>
+            <div class="home-captions">
+              <p class="home-text font-smallText">Léo Vigin</p>
+              <p class="home-text font-smallText">The loop you can’t ever seem to leave</p>
+            </div>
         </section>
-        <section id="loneliness" class="section">
-          <h3>this is a title2</h3>
-        </section>
-        <section id="rage&disgust" class="section">
-          <h4>this is a title3</h4>
+
+        <section class="main">
+          
+          <div class="start-space"></div>
+
+          <section id="loneliness" class="loneliness">
+            <div class="loneliness-flicker"></div>
+            <h2 class="loneliness-title font-lonely">Why is everything so gray?</h2>
+          </section>
+
+          <div class="second-space"></div>
+
+          <div class="lonely-hidden">
+            <p class="font-lonely">Where is everyone?</p>
+            <p class="font-lonely">I am not good enough, i know</p>
+            <p class="font-lonely">Maybe i am meant to be alone</p>
+            <p class="font-lonely">I thought i was getting better</p>
+            <p class="medium-p font-lonely">why?</p>
+            <p class="small-p font-lonely">just why..?</p>
+            <p class="small-p font-lonely">why...</p>
+            <p class="font-lonely">why</p>
+            <p class="last-p font-lonely">WHY</p>
+          </div>
+
+          <canvas id="repulsion" class="repulsive-canva"></canvas> 
+          <section class="repulsive-scroll">
+            <img class="repulsive-img" src="scroll.png" alt="">
+          </section>
+
+          <div class="third-space">
+            <span id="space-point1">.</span>
+            <span id="space-point2">.</span>
+            <span id="space-point3">.</span>
+          </div>
+
+          <section id="peace" class="peace">
+              <h4 id="peacetitle" class="peace-title font-peace">It's okay</h4>
+          </section>
+
+          <div class="start-space"></div>
+
+          <p id="exit-text" class="exit-text font-peace">Now let the night be dark for all of me.
+            <br> Let the night bee too dark for me to see
+            <br> Into the future. Let what will be, be.’
+          <br> - Robert Frost
+          </p>
+          </div>
+          
         </section>
       </main>
-      <footer>
-        <nav>
-          <ul>
-            <li>
-              <a href="#calm">1</a>
-            </li>
-            <li>
-              <a href="#loneliness">2</a>
-            </li>
-            <li>
-              <a href="#rage&disgust">3</a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
-    </div>
+
+    <footer class="footer">
+      <a id="footer-a" class="footer-a font-main" href="#loneliness">..It's not over yet, is it?</a>
+    </footer>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/scribble.js"></script>
   </body>
 </html>

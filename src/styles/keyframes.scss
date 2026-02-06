@@ -1,0 +1,55 @@
+// Entry slides
+
+@keyframes blur {
+  from {
+    filter: blur(20px);
+    filter: opacity(0);
+  }
+  to {
+    filter: blur(0);
+    filter: opacity(100%);
+  }
+}
+
+.blur {
+  animation: blur 4s;
+}
+
+// Emptiness
+
+@keyframes flicker {
+  from {
+    filter: opacity(0);
+  }
+  60% {
+    filter: opacity(0);
+  }
+  65% {
+    filter: opacity(1);
+  }
+  67% {
+    filter: opacity(0);
+  }
+  69% {
+    filter: opacity(1);
+  }
+  100% {
+    filter: opacity(0);
+  }
+}
+// Acceptance
+
+@keyframes settle {
+  0% {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.settle {
+  animation: settle 5s;
+}

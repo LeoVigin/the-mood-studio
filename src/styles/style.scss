@@ -1,0 +1,257 @@
+// Peaceful
+$green: #556a3e;
+// Loneliness
+$light-blue: #8da8bb;
+// Repulsive
+$black: #000000;
+
+@use "/src/styles/fonts.scss";
+@use "/src/styles/keyframes.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  &::-webkit-scrollbar-thumb {
+    background-color: #b3c8bc00;
+    border-radius: #ff000000;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  justify-content: space-between;
+  .header-nav {
+    .header-list {
+      display: flex;
+      list-style: none;
+      margin: 1rem;
+      gap: 2rem;
+      .header-a {
+        text-transform: uppercase;
+        color: white;
+        font-size: 30px;
+      }
+      .header-a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.home {
+  background-image: url("/home-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 105svh;
+  width: 100%;
+  color: white;
+  .home-title-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85svh;
+    width: 100%;
+    .home-title {
+      font-size: 7rem;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+      cursor: default;
+    }
+  }
+  .home-captions {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem;
+    .home-text {
+      font-size: 25px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: default;
+    }
+    .home-text:hover {
+      text-decoration: overline;
+    }
+  }
+}
+
+.main {
+  background-color: $black;
+  .peace {
+    background-image: url(/peace-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    color: white;
+    height: 100svh;
+    align-items: center;
+    justify-content: center;
+    .peace-title {
+      font-size: 5rem;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+      cursor: default;
+    }
+  }
+
+  .loneliness {
+    position: relative; // Establish a positioning context
+    background-image: url("lonely-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    flex-direction: column;
+    color: white;
+    .loneliness-flicker {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      opacity: 0.1;
+      animation: flicker 3s infinite;
+    }
+    .loneliness-title {
+      position: relative;
+      z-index: 1;
+      font-size: 5rem;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+      cursor: default;
+    }
+  }
+
+  .lonely-hidden {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    p {
+      font-size: 3rem;
+      cursor: default;
+      transition: 1s;
+    }
+    p:hover {
+      color: white;
+      transition: 1s;
+    }
+    .small-p {
+      font-size: 1.5rem;
+    }
+    .medium-p {
+      font-size: 2.5rem;
+    }
+    .last-p {
+      font-size: 6rem;
+    }
+  }
+
+  .repulsive-canva {
+    height: 100svh;
+    width: 100%;
+  }
+  .repulsive-scroll {
+    margin-top: 5rem;
+    height: 100svh;
+    overflow-y: auto;
+    display: grid;
+    .repulsive-img {
+      width: 100%;
+      animation: 0.2s infinite;
+    }
+  }
+
+  .start-space {
+    background-color: #535453;
+    height: 30svh;
+    margin: 2rem;
+  }
+
+  .second-space {
+    background-color: #201f20;
+    height: 30svh;
+    margin: 2rem;
+  }
+
+  .third-space {
+    display: flex;
+    color: white;
+    background-color: #000000;
+    height: 60svh;
+    margin: 2rem;
+    margin-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    span {
+      font-size: 5rem;
+      margin: 2rem;
+    }
+    #space-point2 {
+      animation-delay: 0.5s;
+    }
+    #space-point3 {
+      animation-delay: 1s;
+    }
+  }
+
+  .last-space {
+    background-color: #6f6f6f;
+    height: 30svh;
+    margin: 2rem;
+  }
+}
+
+.exit-text {
+  color: white;
+  text-align: center;
+  margin: 5rem;
+  font-size: 3rem;
+  cursor: default;
+}
+
+.footer {
+  background-color: #1a1a19;
+  height: 15svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120svh;
+  .footer-a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+  .footer-a:hover {
+    text-decoration: underline;
+  }
+}
