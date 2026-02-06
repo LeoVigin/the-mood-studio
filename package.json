@@ -12,6 +12,7 @@
     "vite": "^7.2.4"
   },
   "dependencies": {
+    "canvas": "^3.2.1",
     "sass": "^1.97.3"
   }
 }
