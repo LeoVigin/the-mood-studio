@@ -19,7 +19,7 @@ Acceptance | ocean, waves, nature | settles in | light gray/white
 <img width="9184" height="3744" alt="image" src="https://github.com/user-attachments/assets/6823dc7f-cf55-4f78-a302-283c7c5ead0d" />
 
 ## Interface's Ideas
-<img width="9184" height="3744" alt="image" src="https://github.com/user-attachments/assets/8709cc9f-a65f-4c95-8352-dfd734967d38" />
+<img width="1407" height="661" alt="image" src="https://github.com/user-attachments/assets/321de7be-6bd1-4990-86b4-9f8bee86614a" />
 
 ## Installation & Start
 
