@@ -1,12 +1,6 @@
-// Peaceful
-$green: #556a3e;
-// Loneliness
-$light-blue: #8da8bb;
-// Repulsive
-$black: #000000;
-
 @use "/src/styles/fonts.scss";
 @use "/src/styles/keyframes.scss";
+@use "./mixin" as *;
 
 * {
   box-sizing: border-box;
@@ -28,7 +22,7 @@ $black: #000000;
 
 html {
   scroll-behavior: smooth;
-  background-color: $black;
+  background-color: black;
 }
 
 a {
@@ -52,7 +46,6 @@ a {
       gap: 2rem;
       .header-a {
         text-transform: uppercase;
-        color: white;
         font-size: 30px;
       }
       .header-a:hover {
@@ -62,26 +55,19 @@ a {
   }
 }
 .home {
+  @include section;
   background-image: url("/home-bg.png");
-  background-size: cover;
-  background-position: center;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   overflow: hidden;
   height: 105svh;
   width: 100%;
-  color: white;
   .home-title-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     height: 85svh;
     width: 100%;
     .home-title {
+      @include title;
       font-size: 7rem;
-      letter-spacing: 0.5rem;
-      text-transform: uppercase;
-      cursor: default;
     }
   }
   .home-captions {
@@ -101,34 +87,22 @@ a {
 }
 
 .main {
-  background-color: $black;
+  background-color: black;
   .peace {
-    background-image: url(/peace-bg.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    color: white;
+    @include section;
+    @include center;
+    background-image: url("/peace-bg.png");
     height: 100svh;
-    align-items: center;
-    justify-content: center;
     .peace-title {
-      font-size: 5rem;
-      letter-spacing: 0.5rem;
-      text-transform: uppercase;
-      cursor: default;
+      @include title;
     }
   }
 
   .loneliness {
-    position: relative; // Establish a positioning context
-    background-image: url("lonely-bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include section;
+    @include center;
+    position: relative;
+    background-image: url("/lonely-bg.png");
     height: 100svh;
     flex-direction: column;
     color: white;
@@ -141,20 +115,15 @@ a {
       animation: flicker 3s infinite;
     }
     .loneliness-title {
+      @include title;
       position: relative;
       z-index: 1;
-      font-size: 5rem;
-      letter-spacing: 0.5rem;
-      text-transform: uppercase;
-      cursor: default;
     }
   }
 
   .lonely-hidden {
-    display: flex;
+    @include center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 3rem;
     p {
       font-size: 3rem;
@@ -192,26 +161,23 @@ a {
   }
 
   .start-space {
+    @include space;
     background-color: #535453;
-    height: 30svh;
-    margin: 2rem;
   }
 
   .second-space {
+    @include space;
     background-color: #201f20;
-    height: 30svh;
-    margin: 2rem;
   }
 
   .third-space {
-    display: flex;
+    @include center;
     color: white;
     background-color: #000000;
     height: 60svh;
     margin: 2rem;
     margin-top: 5rem;
     flex-direction: column;
-    align-items: center;
     span {
       font-size: 5rem;
       margin: 2rem;
@@ -225,9 +191,8 @@ a {
   }
 
   .last-space {
+    @include space;
     background-color: #6f6f6f;
-    height: 30svh;
-    margin: 2rem;
   }
 }
 
@@ -240,14 +205,11 @@ a {
 }
 
 .footer {
+  @include center;
   background-color: #1a1a19;
   height: 15svh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 120svh;
   .footer-a {
-    color: white;
     text-transform: uppercase;
     font-size: 3rem;
   }

@@ -1,0 +1,24 @@
+@mixin section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin title {
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+@mixin space {
+  height: 30svh;
+  margin: 2rem;
+}
